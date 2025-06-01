@@ -34,7 +34,7 @@ function setup() {
 	balls.x=windowWidth/2+random(-125,125)
 	balls.y=windowHeight/2+random(-125,-200)
 	balls.d=25
-	balls.bounciness = 1
+	balls.bounciness = 1.5
 	new balls.Sprite()
 	newCircle = new Sprite()
 	newCircle.stroke='black'
