@@ -20,7 +20,7 @@ function setup() {
 	circls.collider = "k"
 	circls.mass= 0
 	circls.color='white'
-	circls.bounciness = 1.1;
+	circls.bounciness = 1.15;
 	circls.stroke='white'
 	circls.amount=165
 	circls.overlaps(circls)
