@@ -20,7 +20,7 @@ function setup() {
 	circls.collider = "k"
 	circls.mass= 0
 	circls.color='white'
-	circls.bounciness = 1.15;
+	circls.bounciness = 1.05
 	circls.stroke='white'
 	circls.amount=165
 	circls.overlaps(circls)
@@ -33,8 +33,8 @@ function setup() {
 	balls = new Group()
 	balls.x=windowWidth/2+random(-125,125)
 	balls.y=windowHeight/2+random(-125,-200)
-	balls.d=25
-	balls.bounciness = 1.5
+	balls.d=20
+	balls.bounciness = 1.05
 	new balls.Sprite()
 	newCircle = new Sprite()
 	newCircle.stroke='black'
@@ -52,15 +52,29 @@ function setup() {
 	death.mass=0
 	death.x=windowWidth/2
 	death.y=windowHeight-50
+	death2 = new Sprite()
+	death2.width=10*windowWidth
+	death2.height=50
+	death2.color='black'
+	death2.mass=0
+	death2.x=windowWidth/2
+	death2.y=50
 	death.overlaps(circls)
 	death.overlaps(newCircle)
 	death.overlaps(balls, die)
+	death2.overlaps(circls)
+	death2.overlaps(newCircle)
+	death2.overlaps(balls, die)
+	balls.overlaps(balls)
 }
 
 function draw() {
 	death.x=windowWidth/2
 	death.y=windowHeight-50
 	death.velocity.y=0
+	death2.x=windowWidth/2
+	death2.y=50
+	death2.velocity.y=0
 	background(0)
 	
 	if (checkvar==359.5){
