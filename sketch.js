@@ -95,6 +95,6 @@ function overlap(newCircle, circl){
 
 function die(death, ball){
 	ball.remove()
-	new balls.Sprite(windowWidth/2+random(-125,125),windowHeight/2+random(-125,-200))
-	new balls.Sprite(windowWidth/2+random(-125,125),windowHeight/2+random(-125,-200))
+	new balls.Sprite(windowWidth/2+random(-25,25),windowHeight/2)
+	new balls.Sprite(windowWidth/2+random(-25,25),windowHeight/2)
 }
