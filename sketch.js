@@ -9,7 +9,6 @@ let c3;
 let l=1;
 let checkvar=360;
 let newVar=328;
-
 function setup() {
 	createCanvas(windowWidth, windowHeight);
 	background(0);
@@ -47,18 +46,18 @@ function setup() {
 	newCircle.overlaps(circls, overlap)
 	death = new Sprite()
 	death.width=10*windowWidth
-	death.height=50
+	death.height=1
 	death.color='black'
 	death.mass=0
 	death.x=windowWidth/2
-	death.y=windowHeight-50
+	death.y=windowHeight-1
 	death2 = new Sprite()
 	death2.width=10*windowWidth
-	death2.height=50
+	death2.height=1
 	death2.color='black'
 	death2.mass=0
 	death2.x=windowWidth/2
-	death2.y=50
+	death2.y=1
 	death.overlaps(circls)
 	death.overlaps(newCircle)
 	death.overlaps(balls, die)
@@ -96,6 +95,6 @@ function overlap(newCircle, circl){
 
 function die(death, ball){
 	ball.remove()
-	new balls.Sprite(windowWidth/2+random(-25,25),windowHeight/2-150)
-	new balls.Sprite(windowWidth/2+random(-25,25),windowHeight/2-150)
+	new balls.Sprite(windowWidth/2+random(-125,125),windowHeight/2+random(-125,-200))
+	new balls.Sprite(windowWidth/2+random(-125,125),windowHeight/2+random(-125,-200))
 }
